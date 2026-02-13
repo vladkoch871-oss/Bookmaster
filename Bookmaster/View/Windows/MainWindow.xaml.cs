@@ -23,5 +23,48 @@ namespace Bookmaster.View.Windows
         {
             InitializeComponent();
         }
+
+        private void LoginMi_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindow loginWindow = new LoginWindow();
+            if (loginWindow.ShowDialog()==true)
+            {
+                LibraryMi.Visibility = Visibility.Visible;
+                LoginMi.Visibility = Visibility.Collapsed;
+                LogoutMi.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ReportsMi_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CirculationMi_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ManageCustomersMi_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CloseMi_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void BrowseCatalogMi_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LogoutMi_Click(object sender, RoutedEventArgs e)
+        {
+            LibraryMi.Visibility = Visibility.Collapsed;
+            LoginMi.Visibility = Visibility.Visible;
+            LogoutMi.Visibility = Visibility.Collapsed;
+        }
     }
 }
