@@ -9,6 +9,6 @@
       Title="CitculationPage">
 
     <Grid>
-        
+        <TextBlock Text="Страница для управление абонементом" FontSize="40"/>
     </Grid>
 </Page>

@@ -9,6 +9,6 @@
       Title="ManageCustomersPage">
 
     <Grid>
-        
+        <TextBlock Text="Страница для управление читателями" FontSize="40"/> 
     </Grid>
 </Page>

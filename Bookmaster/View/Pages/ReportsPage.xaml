@@ -9,6 +9,6 @@
       Title="ReportsPage">
 
     <Grid>
-        
+        <TextBlock Text="Страница для создания отчетов" FontSize="40"/>
     </Grid>
 </Page>
