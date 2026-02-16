@@ -24,6 +24,9 @@
                 <MenuItem Name="CirculationMi" Header="Управление абонементом" Click="CirculationMi_Click"/>
                 <MenuItem Name="ReportsMi" Header="Отчеты" Click="ReportsMi_Click"/>
             </MenuItem>
+            <!--Меню-->
         </Menu>
+        <!--Фрейм-->
+        <Frame Name="MainFrame" Grid.Row="2" Margin="20" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

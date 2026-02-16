@@ -9,8 +9,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Bookmaster.Models;
+using Bookmaster.View.Pages;
 
 namespace Bookmaster.View.Windows
 {
@@ -37,17 +40,17 @@ namespace Bookmaster.View.Windows
 
         private void ReportsMi_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new ReportsPage());
         }
 
         private void CirculationMi_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new CitculationPage());
         }
 
         private void ManageCustomersMi_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new ManageCustomersPage());
         }
 
         private void CloseMi_Click(object sender, RoutedEventArgs e)
@@ -57,7 +60,7 @@ namespace Bookmaster.View.Windows
 
         private void BrowseCatalogMi_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new BrowseCatalogPage());
         }
 
         private void LogoutMi_Click(object sender, RoutedEventArgs e)
