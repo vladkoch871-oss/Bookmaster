@@ -9,6 +9,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\booklogo.jpg" />
+    <None Remove="Resources\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
 	  <!--ФззAppDAtaata - папка для хранения классов-->
 	  <Folder Include="AppData\" />
 	  <!--AppData - папка для хранения классов-->
@@ -37,6 +42,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\booklogo.jpg" />
+    <Resource Include="Resources\logo.png" />
   </ItemGroup>
 
 </Project>
