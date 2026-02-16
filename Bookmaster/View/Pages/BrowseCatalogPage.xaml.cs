@@ -24,5 +24,10 @@ namespace Bookmaster.View.Pages
         {
             InitializeComponent();
         }
+
+        private void SearchBookBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
