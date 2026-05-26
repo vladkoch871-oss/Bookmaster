@@ -3,7 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Bookmaster"
              StartupUri="\View\Windows\MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+    
+        <Application.Resources>
+            <ResourceDictionary>
+
+                <SolidColorBrush x:Key="LightGreen1" Color="#8FA43B"/>
+                <SolidColorBrush x:Key="LightGreen2" Color="#718136"/>
+                <SolidColorBrush x:Key="DarkGreen" Color="#50673b"/>
+                <SolidColorBrush x:Key="Gray" Color="#BFBFBF"/>
+
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="/Styles/ButtonStyle.xaml"/>
+                    <ResourceDictionary Source="/Styles/TextBlockStyle.xaml"/>
+                    <ResourceDictionary Source="/Styles/TextBoxStyle.xaml"/>
+                    <ResourceDictionary Source="/Styles/CheckBoxStyle.xaml"/>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+        </Application.Resources>
+
 </Application>

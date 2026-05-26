@@ -1,0 +1,58 @@
+﻿<Window x:Class="Bookmaster.View.Windows.AddCustomerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bookmaster.View.Windows"
+        mc:Ignorable="d"
+        Title="Редактировать/добавить читателя" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Уникальный код"/>
+        <TextBox Name="IDTb" Grid.Column="2" Grid.ColumnSpan="3" IsReadOnly="True"/>
+        
+        <TextBlock Text="ФИО" Grid.Row="2"/>
+        <TextBox Name="NameCustomerTb" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" Text="{Binding Name}"/>
+        
+        <TextBlock Text="Адрес" Grid.Row="4"/>
+        <TextBox Name="AddressTb" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Text="{Binding Address}"/>
+        
+        <TextBlock Text="Индекс/город" Grid.Row="6"/>
+        <TextBox Name="ZipTb" Grid.Row="6" Grid.Column="2" Text="{Binding Zip}"/>
+        <ComboBox Name="AddressCmb" Grid.Row="6" Grid.Column="4" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedIndex="0"/>
+
+        <TextBlock Text="Телефон" Grid.Row="2" Grid.Column="6"/>
+        <TextBox Name="PhoneTb" Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="3" Text="{Binding Phone}"/>
+
+        <TextBlock Text="Почта" Grid.Row="4" Grid.Column="6"/>
+        <TextBox Name="MailTb" Grid.Row="4" Grid.Column="8" Grid.ColumnSpan="3" Text="{Binding Email}"/>
+
+        <Button Grid.Column="8" Name="SaveBtn" Content="Сохранить" Grid.Row="8" Click="SaveBtn_Click"/>
+        <Button Grid.Column="8" Name="AddBtn" Content="Добавить" Grid.Row="8" Click="AddBtn_Click"/>
+        <Button Grid.Column="10" Name="CancelBtn" Content="Закрыть" Grid.Row="8" Click="CancelBtn_Click"/>
+    </Grid>
+</Window>

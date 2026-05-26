@@ -19,6 +19,7 @@ public partial class Customer
 
     public string? Zip { get; set; }
 
+
     public virtual ICollection<Circulation> Circulations { get; set; } = new List<Circulation>();
 
     public virtual City? City { get; set; }

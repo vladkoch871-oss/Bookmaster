@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bookmaster.AppData;
+using Bookmaster.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,11 +24,36 @@ namespace Bookmaster.View.Windows
         public LoginWindow()
         {
             InitializeComponent();
+            CredentialsService.Load(LoginTb, PasswordPPb, RememberDataCb);
         }
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            CredentialsService.Administrator = App.GetContext().Administrators.FirstOrDefault(a => a.Username == LoginTb.Text && a.Password == PasswordPPb.Password);
+
+            if (CredentialsService.HasAdministrator)
+            {
+                if (RememberDataCb.IsChecked==true)
+                {
+                    CredentialsService.Save(LoginTb.Text, PasswordPPb.Password);
+                }
+                else
+                {
+                    CredentialsService.Clear();
+                }
+
+                FeedbackService.Information("Пользователь успешно авторизовался.");
+                  DialogResult = true;
+            }
+            else
+            {
+                FeedbackService.Error("Пользователь не найден. Проверьте учётные данные.");
+            }
+        }
+
+        private void CancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }
